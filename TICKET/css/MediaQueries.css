@@ -1,0 +1,47 @@
+/*Mediaqueries para dispositivos mobiles*/
+@media (max-width: 480px) { 
+    h1{font-size: 23px;}
+    
+    p{
+       font-size: 12px; 
+    } 
+    
+    .logos_GnuLinux{
+        width: 150px;
+    }
+    
+    h3{
+        font-size: 19px;
+    }
+    
+     h4{
+        font-size: 16px;
+    }
+    
+     h5{
+        font-size: 14px;
+    }
+    
+    a{
+       font-size: 12px; 
+    }
+    
+    .label{
+       font-size: 10px;  
+    }
+    
+    form{
+        font-size: 12px;
+    }
+    
+    .panel{
+        font-size: 13px;
+    }
+    
+   
+}
+
+/*Mediaqueries para tablets*/
+@media (min-width: 481px) and (max-width: 768px) {
+     h1{font-size: 27px}
+}

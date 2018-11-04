@@ -1,0 +1,28 @@
+=== ENGLISH ===
+1 - Copy or move the TICKET folder to your local or remote server
+
+2 - Create a database in MYSQL with the name of your preference, select it 
+and import the system database with phpmyadmin or another MYSQL graphical manager 
+that you use, the database is in the DB folder
+
+3 - Open the config.php file with your favorite code editor and configure only 
+the server data. The file is in the "lib" folder
+
+USER: Administrador
+PASS: Administrador
+
+
+
+=== ESPAÑOL ===
+
+1 - Copie o mueva la carpeta TICKET a su servidor local o remoto
+
+2 - Cree una base de datos en MYSQL con el nombre de su preferencia, 
+selecciónela e importe la base de datos del sistema con phpmyadmin u otro gestor grafico de MYSQL 
+que utilice, la base de datos se encuentra en la carpeta DB
+
+3 - Abra el archivo config.php con su editor de código favorito y configure solamente los datos 
+del servidor. El archivo se encuentra en la carpeta “lib”
+
+USUARIO: Administrador
+CLAVE: Administrador
