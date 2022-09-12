@@ -60,7 +60,7 @@ class MysqlQuery {
 
     public static function Guardar($tabla, $campos, $valores) {
         if (!$sql = Mysql::consulta("INSERT INTO $tabla ($campos) VALUES($valores)", Mysql::Conectar())) {
-            die("Error al insertar los datos en la tabla $tabla");
+            die("Error al insertar los datos en la tabla");
         }
 
         return $sql;
@@ -68,7 +68,7 @@ class MysqlQuery {
 
     public static function Eliminar($tabla, $condicion) {
         if (!$sql = Mysql::consulta("DELETE FROM $tabla WHERE $condicion")) {
-            die("Error al eliminar registros en la tabla $tabla");
+            die("Error al eliminar registros en la tabla");
         }
 
         return $sql;
@@ -76,7 +76,7 @@ class MysqlQuery {
 
     public static function Actualizar($tabla, $campos, $condicion) {
         if (!$sql = Mysql::consulta("UPDATE $tabla SET $campos WHERE $condicion")) {
-            die("Error al actualizar datos en la tabla $tabla");
+            die("Error al actualizar datos en la tabla");
         }
         return $sql;
     }

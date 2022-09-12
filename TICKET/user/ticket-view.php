@@ -10,7 +10,7 @@
             $numero = rand(0,9); 
             $codigo .= $numero; 
           } 
-          $num=Mysql::consulta("SELECT * FROM ticket");
+          $num=Mysql::consulta("SELECT id FROM ticket");
           $numero_filas = mysqli_num_rows($num);
 
           $numero_filas_total=$numero_filas+1;
@@ -18,12 +18,12 @@
           /*Fin codigo numero de ticket*/
 
 
-          $fecha_ticket=  MysqlQuery::RequestPost('fecha_ticket');
-          $nombre_ticket=  MysqlQuery::RequestPost('name_ticket');
-          $email_ticket= MysqlQuery::RequestPost('email_ticket');
-          $departamento_ticket= MysqlQuery::RequestPost('departamento_ticket');
-          $asunto_ticket= MysqlQuery::RequestPost('asunto_ticket');        
-          $mensaje_ticket=  MysqlQuery::RequestPost('mensaje_ticket');
+          $fecha_ticket= MysqlQuery::RequestPost('fecha_ticket');
+          $nombre_ticket= MysqlQuery::RequestPost('name_ticket');
+          $email_ticket=MysqlQuery::RequestPost('email_ticket');
+          $departamento_ticket=MysqlQuery::RequestPost('departamento_ticket');
+          $asunto_ticket=MysqlQuery::RequestPost('asunto_ticket');        
+          $mensaje_ticket=MysqlQuery::RequestPost('mensaje_ticket');
           $estado_ticket="Pendiente";
           $cabecera="From: LinuxStore El Salvador<linuxstore@hifenix.com>";
           $mensaje_mail="¡Gracias por reportarnos su problema! Buscaremos una solución para su producto lo mas pronto posible. Su ID ticket es: ".$id_ticket;
@@ -99,7 +99,7 @@
                           <label  class="col-sm-2 control-label">Nombre</label>
                           <div class="col-sm-10">
                               <div class='input-group'>
-                                <input type="text" class="form-control" placeholder="Nombre" required="" pattern="[a-zA-Z ]{1,30}" name="name_ticket" title="Nombre Apellido">
+                                <input type="text" class="form-control" placeholder="Nombre" required="" pattern="[a-zA-Z ]{1,30}" name="name_ticket" title="Nombre Apellido" value="<?php echo $_SESSION['nombre_completo']; ?>" >
                                 <span class="input-group-addon"><i class="fa fa-user"></i></span>
                               </div>
                           </div>
@@ -109,7 +109,7 @@
                           <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                           <div class="col-sm-10">
                               <div class='input-group'>
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email_ticket" required="" title="Ejemplo@dominio.com">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email_ticket" required="" title="Ejemplo@dominio.com" value="<?php echo $_SESSION['email']; ?>" >
                                 <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
                               </div> 
                           </div>
