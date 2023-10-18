@@ -21,8 +21,8 @@ $pdf->SetFillColor(0,255,255);
 $pdf->SetDrawColor(0,0,0);
 $pdf->SetFont("Arial","b",9);
 $pdf->Image('../img/logo.png',40,10,-300);
-$pdf->Cell (0,5,utf8_decode('LinuxStore El Salvador'),0,1,'C');
-$pdf->Cell (0,5,utf8_decode('Reporte de problema mediante Ticket'),0,1,'C');
+$pdf->Cell (0,5,iconv("UTF-8", "ISO-8859-1",'LinuxStore El Salvador'),0,1,'C');
+$pdf->Cell (0,5,iconv("UTF-8", "ISO-8859-1",'Reporte de problema mediante Ticket'),0,1,'C');
 
 $pdf->Ln();
 $pdf->Ln();
@@ -30,26 +30,26 @@ $pdf->Ln();
 $pdf->Ln();
 $pdf->Ln();
 
-$pdf->Cell (0,5,utf8_decode('Información de Ticket #'.utf8_decode($reg['serie'])),0,1,'C');
+$pdf->Cell (0,5,iconv("UTF-8", "ISO-8859-1",'Información de Ticket #'.iconv("UTF-8", "ISO-8859-1",$reg['serie'])),0,1,'C');
 
 $pdf->Cell (35,10,'Fecha',1,0,'C',true);
-$pdf->Cell (0,10,utf8_decode($reg['fecha']),1,1,'L');
+$pdf->Cell (0,10,iconv("UTF-8", "ISO-8859-1",$reg['fecha']),1,1,'L');
 $pdf->Cell (35,10,'Serie',1,0,'C',true);
-$pdf->Cell (0,10,utf8_decode($reg['serie']),1,1,'L');
+$pdf->Cell (0,10,iconv("UTF-8", "ISO-8859-1",$reg['serie']),1,1,'L');
 $pdf->Cell (35,10,'Estado',1,0,'C',true);
-$pdf->Cell (0,10,utf8_decode($reg['estado_ticket']),1,1,'L');
+$pdf->Cell (0,10,iconv("UTF-8", "ISO-8859-1",$reg['estado_ticket']),1,1,'L');
 $pdf->Cell (35,10,'Nombre',1,0,'C',true);
-$pdf->Cell (0,10,utf8_decode($reg['nombre_usuario']),1,1,'L');
+$pdf->Cell (0,10,iconv("UTF-8", "ISO-8859-1",$reg['nombre_usuario']),1,1,'L');
 $pdf->Cell (35,10,'Email',1,0,'C',true);
-$pdf->Cell (0,10,utf8_decode($reg['email_cliente']),1,1,'L');
+$pdf->Cell (0,10,iconv("UTF-8", "ISO-8859-1",$reg['email_cliente']),1,1,'L');
 $pdf->Cell (35,10,'Departamento',1,0,'C',true);
-$pdf->Cell (0,10,utf8_decode($reg['departamento']),1,1,'L');
+$pdf->Cell (0,10,iconv("UTF-8", "ISO-8859-1",$reg['departamento']),1,1,'L');
 $pdf->Cell (35,10,'Asunto',1,0,'C',true);
-$pdf->Cell (0,10,utf8_decode($reg['asunto']),1,1,'L');
+$pdf->Cell (0,10,iconv("UTF-8", "ISO-8859-1",$reg['asunto']),1,1,'L');
 $pdf->Cell (35,15,'Problema',1,0,'C',true);
-$pdf->Cell (0,15,utf8_decode($reg['mensaje']),1,1,'L');
+$pdf->Cell (0,15,iconv("UTF-8", "ISO-8859-1",$reg['mensaje']),1,1,'L');
 $pdf->Cell (35,15,'Solucion',1,0,'C',true);
-$pdf->Cell (0,15,utf8_decode($reg['solucion']),1,1,'L');
+$pdf->Cell (0,15,iconv("UTF-8", "ISO-8859-1",$reg['solucion']),1,1,'L');
 
 $pdf->Ln();
 
